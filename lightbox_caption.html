@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>LightBox Caption</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.lightbox-0.5-mod-caption-0.1.min.js"></script>
+</head>
+<body>
+<!--<a href="photos/image1.jpg" class="lightbox" id="image1">Ouvrir la LightBox</a>-->
+
+
+<div class="galerie_produit_image"> <a id="1_123" href="http://recette.pro.dedietrich-thermique.fr/var/ddth/storage/images/media/ru/gammes/systemes_solaires_cesi/photo_produit_systemes_dietrisol_trio/3584-4-fre-FR/photo_produit_systemes_dietrisol_trio_galerie_photo_large.jpg" style="padding-top: 10px; height: 110px;" class="apercu" title="Photo produit systèmes DIETRISOL TRIO"> <img src="http://recette.pro.dedietrich-thermique.fr/var/ddth/storage/images/media/ru/gammes/systemes_solaires_cesi/photo_produit_systemes_dietrisol_trio/3584-4-fre-FR/photo_produit_systemes_dietrisol_trio_galerie_photo_small.jpg" alt="" title="" width="72" height="100"> </a>
+	<p><a id="dl_1_123" href="http://recette.pro.dedietrich-thermique.fr/download/file?file=var/ddth/storage/images/media/ru/gammes/systemes_solaires_cesi/photo_produit_systemes_dietrisol_trio/3584-4-fre-FR/photo_produit_systemes_dietrisol_trio.jpg" title="Photo produit systèmes DIETRISOL TRIO">Télécharger</a></p>
+</div>
+
+<div class="galerie_produit_image"> <a id="1_124" href="http://recette.pro.dedietrich-thermique.fr/var/ddth/storage/images/media/commun/photos_produits/chaudieres_murales_condensation/photo_produit_innovens_mca_15_25_25_28_mi/1006188-4-fre-FR/photo_produit_innovens_mca_15_25_25_28_mi_galerie_photo_large.jpg" style="padding-top: 10px; height: 110px;" class="apercu" title="Photo produit systèmes DIETRISOL TRIO"> <img src="http://recette.pro.dedietrich-thermique.fr/var/ddth/storage/images/media/ru/gammes/systemes_solaires_cesi/photo_produit_systemes_dietrisol_trio/3584-4-fre-FR/photo_produit_systemes_dietrisol_trio_galerie_photo_small.jpg" alt="" title="" width="72" height="100"> </a>
+	<p><a id="dl_1_124" href="http://recette.pro.dedietrich-thermique.fr/download/file?file=var/ddth/storage/images/media/ru/gammes/systemes_solaires_cesi/photo_produit_systemes_dietrisol_trio/3584-4-fre-FR/photo_produit_systemes_dietrisol_trio.jpg" title="Photo produit systèmes DIETRISOL TRIO">Télécharger</a></p>
+</div>
+
+<div class="galerie_produit_image"> <a id="1_125" href="http://recette.pro.dedietrich-thermique.fr/var/ddth/storage/images/media/ru/new_produits/mc_35_e/photo_produit_innovens_mc_35_e_mc_45_mc_65_mc_90/4106-1-fre-FR/photo_produit_innovens_mc_35_e_mc_45_mc_65_mc_90_galerie_photo_large.jpg" style="padding-top: 10px; height: 110px;" class="apercu" title="Photo produit systèmes DIETRISOL TRIO"> <img src="http://recette.pro.dedietrich-thermique.fr/var/ddth/storage/images/media/ru/gammes/systemes_solaires_cesi/photo_produit_systemes_dietrisol_trio/3584-4-fre-FR/photo_produit_systemes_dietrisol_trio_galerie_photo_small.jpg" alt="" title="" width="72" height="100"> </a>
+	<p><a id="dl_1_125" href="http://recette.pro.dedietrich-thermique.fr/download/file?file=var/ddth/storage/images/media/ru/gammes/systemes_solaires_cesi/photo_produit_systemes_dietrisol_trio/3584-4-fre-FR/photo_produit_systemes_dietrisol_trio.jpg" title="Photo produit systèmes DIETRISOL TRIO">Télécharger</a></p>
+</div>
+
+
+<script type="text/javascript">
+$(function() {
+	
+	//$('a.apercu').lightBox();
+	$('a.apercu').lightBox({ 
+		getCaption: function(jQueryObject) {
+			//jQueryObject.parent().children('p').children('a').attr(href);
+			return '<a href="'+jQueryObject.parent().children('p').children('a').attr('href')+'">Télécharger le fichier</a>';
+		}
+	});
+});
+</script>
+</body>
+</html>
