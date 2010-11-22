@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>LightBox Caption Sample</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.lightbox-0.5-mod-caption-0.1.min.js"></script>
+<style type="text/css">
+a.lightbox {
+	display:block;
+	width:150px;
+	height:150px;
+	background-position:center;
+	border:5px #CCC solid;
+	float:left;
+	margin:10px;	
+}
+
+a.lightbox:hover {
+	border-color:#666;	
+}
+
+hr {
+	clear:left;
+	border:none;
+	height:0px;
+	margin:0px;
+	padding:0px;
+}
+
+pre {
+	padding:20px;
+	background-color:#EEE;	
+}
+</style>
+</head>
+<body>
+<h1>LightBox Caption Sample</h1>
+<a href="images-sample/image1_full.png" style="background-image:url(images-sample/image1_full.png);" class="lightbox" title="Get the file"></a>
+<a href="images-sample/image2_full.png" style="background-image:url(images-sample/image2_full.png);" class="lightbox" title="Get the file"></a>
+<a href="images-sample/image3_full.png" style="background-image:url(images-sample/image3_full.png);" class="lightbox" title="Get the file"></a>
+<script type="text/javascript">
+$(function() {
+	$('a.lightbox').lightBox({ 
+		getCaption: function(jQueryObject) {
+			return '<a href="'+jQueryObject.attr('href')+'">'+jQueryObject.attr('title')+'</a>';
+		}
+	});
+});
+</script>
+
+<hr />
+
+<h2>HTML</h2>
+<pre>
+&lt;a href="images-sample/image1_full.png" style="background-image:url(images-sample/image1_full.png);" class="lightbox" title="Get the file"&gt;&lt;/a&gt;
+&lt;a href="images-sample/image2_full.png" style="background-image:url(images-sample/image2_full.png);" class="lightbox" title="Get the file"&gt;&lt;/a&gt;
+&lt;a href="images-sample/image3_full.png" style="background-image:url(images-sample/image3_full.png);" class="lightbox" title="Get the file"&gt;&lt;/a&gt;
+</pre>
+
+<h2>Javascript</h2>
+<pre>
+&lt;script type="text/javascript"&gt;
+$(function() {
+	$('a.lightbox').lightBox({ 
+		getCaption: function(jQueryObject) {
+			return '&lt;a href="'+jQueryObject.attr('href')+'"&gt;'+jQueryObject.attr('title')+'&lt;/a&gt;';
+		}
+	});
+});
+&lt;/script&gt;
+</pre>
+</body>
+</html>
